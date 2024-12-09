@@ -1,24 +1,5 @@
 document. title = "Hello! From JS!"
 
-// document.getElementById(“title”)
-// 은 html에 있는 id를 불러올 수 있다.
-
-// js에서는 html이 표현하는 object를 보여준다
-
-// title.innerText = “got you”
-// 처럼 js에서 바꾸기 쌉가능 id를 추가했기에 가능.
-
-// 모든 것들을 html에서 항목들을 가지고와서 js에서 변경한다
-// console.dir(“title”);
-// js에서는 html이 표현하는 object를 보여준다
-
-// title.innerText = “got you”
-// 처럼 js에서 바꾸기 쌉가능 id를 추가했기에 가능.
-
-// 모든 것들을 html에서 항목들을 가지고와서 js에서 변경한다.
-
-////////////////////////////////////////////////////////////
-
 // html 은 정적 리소스 입니다. 
 // 사용자에게 표시할 화면을 html로 만들면 그걸로 변경할 수 없는 상태가 됩니다. 
 // 그런데, 그런 결과 화면을 상황에 따라 변경하는게 필요해 졌고, 
