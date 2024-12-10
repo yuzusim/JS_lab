@@ -3,17 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/login.css">
     <title>Momentum App</title>
 </head>
 <style>
     .hello h1{cursor: pointer;}
 </style>
 <body>
+    <!-- 1. input value 
     <div id="login-form">
-        <input type="text" placeholder="what is your name?">
+        <input required="" type="text" placeholder="what is your name?">
         <button>Login</button>
     </div>
+    -->
+
+    <!-- 2. 유저네임 유효성 검사 
+    <div id="login-form">
+        <input required="" type="text" placeholder="what is your name?">
+        <button>Login</button>
+    </div>
+    -->
+
+    <!-- 3. 브라우저 자체 validation 구현 -->
+    <form id="login-form">
+        <input required maxlength="15" type="text" placeholder="what is your name?">
+        <button>Login</button>
+    </form>
+
 
     <script src="./JS/login.js" type="text/javascript"></script>
 </body>
