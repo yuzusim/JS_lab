@@ -41,7 +41,7 @@ const HIDDEN_CLASSNAME = "hidden";
 function onLoginSubmit(event){
     event.preventDefault();  
     loginForm.classList.add(HIDDEN_CLASSNAME);
-    const username = loginInput.value; // 만약 loginInput.value를 onLoginSubmit 함수 내부가 아닌 외부에서 선언하면 local storage에 저장을 못함
+    const username = loginInput.value;
     localStorage.setItem("username", username); // localStorage에 유저네임을 저장
     greeting.innerText = `Hello ${username}`; // 백틱 사용!
     greeting.classList.remove(HIDDEN_CLASSNAME);
