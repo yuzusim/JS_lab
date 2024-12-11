@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/clock.css">
     <link rel="stylesheet" href="./css/login.css">
     <title>Momentum App</title>
 </head>
@@ -10,38 +11,15 @@
     /* .hello h1{cursor: pointer;} */
 </style>
 <body>
-    <!-- 1. input value 
-    <div id="login-form">
-        <input required="" type="text" placeholder="what is your name?">
-        <button>Login</button>
-    </div>
-    -->
-
-    <!-- 2. 유저네임 유효성 검사 
-    <div id="login-form">
-        <input required="" type="text" placeholder="what is your name?">
-        <button>Login</button>
-    </div>
-    -->
-
-    <!-- 3. 브라우저 자체 validation 구현 
-    <form id="login-form">
-        <input required maxlength="15" type="text" placeholder="what is your name?">
-        <button>Login</button>
-    </form>
-
-    4. a 태그 동작 막기
-    <a href = "https://nomadcoders.co">Go to courses</a> 
-    -->
-
-    <!-- 5. HTML요소 자체를 없애기 class="hidden" -->
     <form id="login-form" class="hidden">
         <input required maxlength="15" type="text" placeholder="what is your name?">
         <button>Login</button>
     </form>
+    <!--h2 받아와서 그 내부에 텍스트 입력-->
+    <h2 id="clock">00:00</h2>
     <h1 id ="greeting" class="hidden"></h1>
-
-
+    
     <script src="./JS/login.js" type="text/javascript"></script>
+    <script src="./JS/clock.js" type="text/javascript"></script>
 </body>
 </html>
