@@ -68,3 +68,5 @@ function getClock(){
  }
  getClock() // getClock()을 즉시 호출
 setInterval(getClock, 1000); // 매초 마다 getClock()을 다시 실행
+
+
