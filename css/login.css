@@ -1,2 +1,27 @@
+*{margin:0; padding:0;}
+
+body{
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size:12px;
+    line-height:18px;
+    color:#333;
+    float:none !important; width:auto !important; margin:0 !important;
+
+    position:relative; z-index:0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    overflow:hidden !important
+}
+
 a{cursor: pointer;}
 .hidden{display: none;}
+
+img{}
+
+
+.bgimage {
+    width: 100%; height: 100vh; 
+    vertical-align: top;
+    text-align:center;
+}
