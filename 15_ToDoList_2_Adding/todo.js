@@ -2,36 +2,17 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
 
-// ToDoList 삭제하는 버튼 추가 할꺼임
-
-function deleteToDo(event){
-    // console.log("lalala");
-    
-    // 문제 어디를 클릭한지 모름
-    //console.dir(event.target.parentElement.innerText);
-    
-    // 우리가 삭제하고 싶은 li
-    const li = event.target.parentElement;
-    li.remove();
-}
-
 function painToDo(a){
     console.log("I will paint", a);
     // li 추가
     const li = document.createElement("li");
     const span = document.createElement("span");
-    const button = document.createElement("button");
-
     li.appendChild(span); // li 자식 span 생성
-    li.appendChild(button);
     span.innerText = a; 
-    button.innerText = "❌"; 
-    button.addEventListener("click", deleteToDo);
     // console.log(li);
 
     // li를 list(toDoList)에 추가
     toDoList.appendChild(li);
-
 
 }
 
