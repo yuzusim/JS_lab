@@ -14,7 +14,7 @@ const toDos = []; // toDos의 array을 로컬 스토리지에 저장하고 싶�
 
 // 저장 기능 추가 -> 저장 기능을 함수를 정의
 // 로컬 스토리지에 저장 그걸 불러와서 화면에 그려줌.
-function saveToDos( ) { // saveToDos의 역할 -> toDos의 array 내용을 로컬스토리지에 저장
+function saveToDos() { // saveToDos의 역할 -> toDos의 array 내용을 로컬스토리지에 저장
     // localStorage.setItem("todos", toDos); 
     // -> 하지만 이렇게 저장하게 되면 직접 localStorage 에서 확인해봤을 때 값들이 array안에서 string의 형태가 아닌 상태로 저장
     // 예) key: todos value: a,b,c
@@ -69,7 +69,7 @@ function handleToDoSubmit(event) {
 
     // toDos 배열을 가져와서 newTodo를 push 할것
     toDos.push(newTodo);
-
+    saveToDos(); // 로컬스토리지에 저장
 
     painToDo(newTodo); // handleToDoSubmit에서 painToDo(newTodo)를 호출
 
