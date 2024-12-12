@@ -2,23 +2,25 @@
 
 body{
     font-family: 'Noto Sans KR', sans-serif;
-    font-size:12px;
-    line-height:18px;
+    font-size:14px;
+    _line-height:18px;
     color:#333;
     float:none !important; width:auto !important; margin:0 !important;
 
-    position:relative; z-index:0;
+    /* position:relative; _z-index:0;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    overflow:hidden !important
+    overflow:hidden !important */
 }
 
 a{cursor: pointer;}
 .hidden{display: none;}
 
-img{}
-
+#login-form, button, h2, h1, #greeting, #quote{
+    _color: rgba(255, 255, 255, .8);
+    z-index: 1000;
+}
 
 .bgimage {
     width: 100%; height: 100vh; 
