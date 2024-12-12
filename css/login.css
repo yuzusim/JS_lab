@@ -1,11 +1,11 @@
-*{margin:0; padding:0;}
+/* *{margin:0; padding:0;} */
 
 body{
     font-family: 'Noto Sans KR', sans-serif;
     font-size:14px;
     _line-height:18px;
     color:#333;
-    float:none !important; width:auto !important; margin:0 !important;
+    _float:none !important; width:auto !important; margin:0 !important;
 
     /* position:relative; _z-index:0;
     background-size: cover;
