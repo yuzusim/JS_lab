@@ -88,10 +88,6 @@ function sayHello(item){
 // handleToDoSubmit가 실행 될때 painToDo(newTodo);에 저장을하고 
 // 다시 새로운 painToDo(a) 넣어서 출력
 
-// 로컬스토리지에 savedToDos가 존재하면 
-// 각각의 아이템을 순회한뒤 그 아이템들을 parsedToDo 제이슨을 이용해 꺼내온다.
-
-
 const savedToDos = localStorage.getItem(TODOS_KEY);
 // console.log(savedToDos);
 // savedToDos가 로컬 스토리지에 존재하면
@@ -110,13 +106,13 @@ if(savedToDos !== null) {
     // 람다식으로 펑션 sayHello 필요 없음
     parsedToDos.forEach((item) => console.log("this is the turn of", item));
 
-}
-
     // local storage에 array로 저장이 안되기 때문에 
     // JSON.stringify로 array처럼 생긴 string으로 저장한 후 
     // 다시 JSON.parse 이용해 array로 꺼내는 방법이네요
     // array.foreach는 받아온 array를 for 반복문 없이 
     // item 하나씩 function에 넣을 수 있는 신기한 녀석이네요
+
+}
 
 
 // 1. 사용법

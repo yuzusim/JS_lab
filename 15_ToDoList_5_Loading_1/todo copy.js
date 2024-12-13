@@ -88,53 +88,26 @@ function sayHello(item){
 // handleToDoSubmit가 실행 될때 painToDo(newTodo);에 저장을하고 
 // 다시 새로운 painToDo(a) 넣어서 출력
 
-// 로컬스토리지에 savedToDos가 존재하면 
-// 각각의 아이템을 순회한뒤 그 아이템들을 parsedToDo 제이슨을 이용해 꺼내온다.
-
-
 const savedToDos = localStorage.getItem(TODOS_KEY);
 // console.log(savedToDos);
-// savedToDos가 로컬 스토리지에 존재하면
+
+// TODOS_KEY에 저장된 값을 로컬 스토리지에서 가져옵니다.
+// 값이 문자열 형태로 저장되어 있으므로, 가져온 값은 JSON 형태의 문자열
+
+// 저장된 값이 있으면(null이 아니면) 아래 코드를 실행
 if(savedToDos !== null) {
-    const parsedToDos = JSON.parse(savedToDos);
-    // console.log(parsedToDos);
+    const parsedToDos = JSON.parse(savedToDos); // JSON.parse를 이용해 문자열을 JavaScript 객체(혹은 배열)로 변환
     
-    // 배열 각각의 아이템을 가지고 무언가를 하고 싶을거야
-    // 배열에 있는 각각의 아이템에 대해 펑션을 실행한다던지, 화면에 뿌린다던지, 텍스트 변형
-    // JS는 배열에 있는 각각의 아이템에 대해 펑션을 실행할 수 있게 해줌
-    // 
+    // parsedToDos는 배열로 사용 가능
 
     // parsedToDos.forEach(sayHello);
     // parsedToDos가 가지고 있는 각가의 아이템에 대해 sayHello 펑션 실행해줘
 
     // 람다식으로 펑션 sayHello 필요 없음
+    // 변환된 배열 parsedToDos의 각각의 아이템에 대해 순서대로 콜백 함수(람다식)를 실행
     parsedToDos.forEach((item) => console.log("this is the turn of", item));
 
+    // 람다 console.log 부분
+    // 각 아이템에 대해 원하는 작업을 수행 가능함
+    // (예: 화면에 표시하거나 스트를 변형)
 }
-
-    // local storage에 array로 저장이 안되기 때문에 
-    // JSON.stringify로 array처럼 생긴 string으로 저장한 후 
-    // 다시 JSON.parse 이용해 array로 꺼내는 방법이네요
-    // array.foreach는 받아온 array를 for 반복문 없이 
-    // item 하나씩 function에 넣을 수 있는 신기한 녀석이네요
-
-
-// 1. 사용법
-
-// 1) for문
-// 배열의 인덱스 기반으로 반복을 처리합니다.
-// 반복 범위나 조건을 직접 정의할 수 있어 더 유연합니다.
-// 배열뿐만 아니라 숫자 범위나 일반 객체에도 사용할 수 있습니다.
-// const numbers = [1, 2, 3, 4, 5];
-
-// for (let i = 0; i < numbers.length; i++) {
-//     console.log(numbers[i]); // 1, 2, 3, 4, 5
-// }
-
-// 2) forEach()
-// 배열에 특화된 반복문입니다.
-// 배열의 각 요소를 순서대로 처리하며, 자동으로 요소 값을 가져옵니다.
-// 인덱스를 수동으로 관리하지 않아 코드가 더 간결해집니다.
-// numbers.forEach((num) => {
-//     console.log(num); // 1, 2, 3, 4, 5
-// });
